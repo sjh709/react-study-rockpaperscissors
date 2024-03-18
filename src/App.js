@@ -1,23 +1,52 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Box from './component/Box';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHandScissors,
+  faHandBackFist,
+  faHand,
+} from '@fortawesome/free-solid-svg-icons';
+
+const choice = {
+  rock: {
+    name: 'Rock',
+    img: 'https://nationaltoday.com/wp-content/uploads/2021/08/National-Pet-Rock-Day-1200x834.jpg',
+  },
+  paper: {
+    name: 'Paper',
+    img: 'https://www.collinsdictionary.com/images/full/paper_111691001.jpg',
+  },
+  scissors: {
+    name: 'Scissors',
+    img: 'https://content.etilize.com/Alternate-Image1/1073503247.jpg',
+  },
+};
 
 function App() {
+  const [userSelect, setUserSelect] = useState(null);
+
+  const play = (userChoice) => {
+    setUserSelect(choice[userChoice]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className='main'>
+        <Box title='You' item={userSelect} />
+        {/* <Box title='Computer' /> */}
+      </div>
+      <div className='main'>
+        <button className='item-button' onClick={() => play('scissors')}>
+          <FontAwesomeIcon icon={faHandScissors} />
+        </button>
+        <button className='item-button' onClick={() => play('rock')}>
+          <FontAwesomeIcon icon={faHandBackFist} />
+        </button>
+        <button className='item-button' onClick={() => play('paper')}>
+          <FontAwesomeIcon icon={faHand} />
+        </button>
+      </div>
     </div>
   );
 }

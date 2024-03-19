@@ -1,8 +1,8 @@
 # ✌️ 가위 바위 보 게임 (rockpaperscissors)
 
-<!-- <img width="1532" alt="image" src="">
+<img width="1532" alt="image" src="https://github.com/sjh709/react-study-rockpaperscissors/assets/42454759/2d8f2a40-d3ca-420d-820e-51dc037c6317">
 
-- 배포 URL :  -->
+- 배포 URL : https://react-study-rockpaperscissors.netlify.app/
 
 <br>
 
@@ -25,5 +25,19 @@
 <br>
 
 ## 3. 프로젝트 구조
+
+```
+📦src
+ ┣ 📂component
+ ┃ ┗ 📜Box.js
+ ┣ 📜App.css
+ ┣ 📜App.js
+ ┣ 📜App.test.js
+ ┣ 📜index.css
+ ┣ 📜index.js
+ ┣ 📜logo.svg
+ ┣ 📜reportWebVitals.js
+ ┗ 📜setupTests.js
+```
 
 <br>

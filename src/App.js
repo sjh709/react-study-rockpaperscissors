@@ -25,16 +25,25 @@ const choice = {
 
 function App() {
   const [userSelect, setUserSelect] = useState(null);
+  const [computerSelect, setComputerSelect] = useState(null);
 
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
+    let computerChoice = randomChoice();
+    setComputerSelect(choice[computerChoice]);
+  };
+
+  const randomChoice = () => {
+    const itemArray = Object.keys(choice);
+    const randomItem = Math.floor(Math.random() * itemArray.length);
+    return itemArray[randomItem];
   };
 
   return (
     <div>
       <div className='main'>
         <Box title='You' item={userSelect} />
-        {/* <Box title='Computer' /> */}
+        <Box title='Computer' item={computerSelect} />
       </div>
       <div className='main'>
         <button className='item-button' onClick={() => play('scissors')}>

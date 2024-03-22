@@ -2,7 +2,7 @@
 
 <img width="1532" alt="image" src="https://github.com/sjh709/react-study-rockpaperscissors/assets/42454759/2d8f2a40-d3ca-420d-820e-51dc037c6317">
 
-- 배포 URL : https://react-study-rockpaperscissors.netlify.app/
+- 배포 URL : ~~https://react-study-rockpaperscissors.netlify.app/~~
 
 <br>
 
